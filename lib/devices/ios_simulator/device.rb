@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'test_environment.rb'
+require 'mobile_application.rb'
+
 # Device class for standard iOS Simulator Appium config
 class Device
   CAPABILITIES = {
@@ -10,7 +12,7 @@ class Device
       platformName: 'iOS',
       platformVersion: '10.3',
       deviceName: 'iPhone 6',
-      app: File.join(TestEnvironment::APP_PATH, TestEnvironment::IOS_APP),
+      app: File.join(TestEnvironment::APP_PATH, MobileApplication::BINARY[:ios_simulator]),
       browserName: '',
       newCommandTimeout: TestEnvironment::IMPLICIT_WAIT,
       language: 'en',

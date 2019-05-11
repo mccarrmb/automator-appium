@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 require 'test_environment.rb'
+require 'mobile_application.rb'
+
+# Device class for standard Android hardware Appium config
 class Device
   CAPABILITIES = {
     caps: {
@@ -8,7 +11,7 @@ class Device
       platformName: 'Android',
       platformVersion: '4.4',
       deviceName: 'Generic Android Device',
-      app: File.join(TestEnvironment::APP_PATH, TestEnvironment::ANDROID_APP),
+      app: File.join(TestEnvironment::APP_PATH, MobileApplication::BINARY[:android_arm8]),
       browserName: '',
       newCommandTimeout: TestEnvironment::IMPLICIT_WAIT,
       language: 'en',

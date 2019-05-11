@@ -9,6 +9,7 @@ desc 'Start a console session with Appium loaded'
 task :console do
   require 'irb'
   require 'irb/completion'
+  require 'pry'
   require 'selenium-webdriver'
   require 'appium_lib'
   ARGV.clear
@@ -22,4 +23,3 @@ end
 
 # Android emulator is the easiest to set up
 task default: ['android_emulator']
-
