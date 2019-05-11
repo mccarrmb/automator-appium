@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Module containing universal characteristics of the test environment 
 # that will be consistent for all test processes
 module TestEnvironment

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'date'
 require 'test_environment.rb'
 require 'mobile_application.rb'

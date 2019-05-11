@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 desc 'Executes tests against an iOS 10.4 simulator'
 Rake::TestTask.new(:ios_simulator) do |t|
   t.warning = false

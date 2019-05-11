@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 desc 'Executes tests against an Android 4.4 emulator'
 Rake::TestTask.new(:android_emulator) do |t|
   t.warning = false

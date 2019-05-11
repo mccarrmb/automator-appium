@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ScreenObject
   # Generic "screen" object akin to Selenium's page object
   class Screen

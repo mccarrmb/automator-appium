@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_environment.rb'
 class Device
   CAPABILITIES = {

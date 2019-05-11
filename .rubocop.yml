@@ -16,6 +16,6 @@ Lint/UselessAssignment:
 # Drivers don't behave if 'self' isn't explicitly specified.
 Style/RedundantSelf:
   Enabled: false
-# This isn't 1988. Nobody has 80 column displays anymore.
+# This isn't 1988. Nobody has 80 column display limits anymore.
 Metrics/LineLength:
   Enabled: false

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_environment.rb'
 # Device class for standard iOS Simulator Appium config
 class Device
