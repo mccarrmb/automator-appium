@@ -2,11 +2,15 @@
 
 require 'test_environment.rb'
 
-# Device class for standard iOS hardware Appium config
+# Client class for standard iOS Simulator Appium config
 class Device
-  APP_BINARY = 'app.ipa'.freeze
-  APP_NAMESPACE = 'com.ios.app'.freeze
-  APP_NAME = 'App'.freeze
+  PROPERTIES = {
+    build: 'QA',
+    binary: 'app.app',
+    namespace: 'com.ios.app',
+    name: 'App'
+  }.freeze
+
   CAPABILITIES = {
     caps: {
       # General settings
@@ -14,7 +18,7 @@ class Device
       platformName: 'iOS',
       platformVersion: '10.3',
       deviceName: 'iPhone 6',
-      app: File.join(TestEnvironment::APP_PATH, BINARY),
+      app: File.join(TestEnvironment::APP_PATH, PROPERTIES[:binary]),
       browserName: '',
       newCommandTimeout: TestEnvironment::IMPLICIT_WAIT,
       language: 'en',
@@ -29,7 +33,7 @@ class Device
       printPageSourceOnFindFailure: true,
       # iOS specific settings
       calendarFormat: 'gregorian',
-      bundleId: '', # com.whapps.erp
+      bundleId: '', # com.ios.app
       udid: '',
       launchTimeout: TestEnvironment::LAUNCH_TIMEOUT,
       locationServicesEnabled: false, # Sim only setting

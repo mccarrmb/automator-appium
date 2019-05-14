@@ -2,18 +2,22 @@
 
 require 'test_environment.rb'
 
-# Device class for standard Android hardware Appium config
-class Device
-  APP_BINARY = 'app.apk'.freeze
-  APP_NAMESPACE = 'com.android.app'.freeze
-  APP_NAME = 'App'.freeze
+# Client class for standard Android hardware Appium config
+class Client
+  PROPERTIES = {
+    build: 'QA',
+    binary: 'app.apk',
+    namespace: 'com.android.app',
+    name: 'App'
+  }.freeze
+
   CAPABILITIES = {
     caps: {
       automationName: 'UiAutomator2',
       platformName: 'Android',
       platformVersion: '4.4',
       deviceName: 'Generic Android Device',
-      app: File.join(TestEnvironment::APP_PATH, BINARY),
+      app: File.join(TestEnvironment::APP_PATH, PROPERTIES[:binary]),
       browserName: '',
       newCommandTimeout: TestEnvironment::IMPLICIT_WAIT,
       language: 'en',
@@ -75,7 +79,7 @@ class Device
       isHeadless: false,
       uiautomator2ServerLaunchTimeout: TestEnvironment::LAUNCH_TIMEOUT
       # uiautomator2ServerInstallTimeout: ,
-      # otherApps: 
+      # otherApps:
     },
     appium_lib: {
       sauce_username:   nil, # don't run on Sauce

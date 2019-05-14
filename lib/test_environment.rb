@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Module containing universal characteristics of the test environment 
-# that will be consistent for all test processes
+# Module containing universal characteristics of the test environment - Appium
+# server - that will be consistent for all test processes
 module TestEnvironment
   RETRIES = 10 # Amount of times to retry
   IMPLICIT_WAIT = 10 # seconds to wait for GUI elements to be present/usable

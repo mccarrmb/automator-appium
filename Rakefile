@@ -5,12 +5,11 @@ require 'rubocop/rake_task'
 
 Dir['tasks/**/*.rake'].each { |rake| load rake }
 
-desc 'Start a console session with Appium loaded'
+desc 'Start a console session with Appium, Pry, and autocomplete loaded'
 task :console do
   require 'irb'
   require 'irb/completion'
   require 'pry'
-  require 'selenium-webdriver'
   require 'appium_lib'
   ARGV.clear
   IRB.start

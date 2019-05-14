@@ -6,16 +6,14 @@ require 'minitest/autorun'
 require 'minitest/unit'
 require 'minitest/pride'
 require 'test_environment.rb'
-require 'mobile_application.rb'
 require 'local_driver.rb'
 require 'remote_driver.rb'
-require 'device.rb'
+require 'client.rb'
 
 # Main test class for setting up config and creating drivers
 class TestBase < Minitest::Test
   def setup
-    @app = MobileApplication.new(Device::BINARY, Device::NAMESPACE, Device::APP_NAME, Device::CAPABILITIES)
-    @driver = LocalDriver.new()
+    @driver = LocalDriver.new
     @agent = @driver.instance
     Appium.promote_appium_methods ::Minitest::Test, driver
   end
