@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
 require 'test_environment.rb'
-require 'mobile_application.rb'
 
 # Device class for standard iOS hardware Appium config
 class Device
+  APP_BINARY = 'app.ipa'.freeze
+  APP_NAMESPACE = 'com.ios.app'.freeze
+  APP_NAME = 'App'.freeze
   CAPABILITIES = {
     caps: {
       # General settings
@@ -12,7 +14,7 @@ class Device
       platformName: 'iOS',
       platformVersion: '10.3',
       deviceName: 'iPhone 6',
-      app: File.join(TestEnvironment::APP_PATH, MobileApplication::BINARY[:ios_native]),
+      app: File.join(TestEnvironment::APP_PATH, BINARY),
       browserName: '',
       newCommandTimeout: TestEnvironment::IMPLICIT_WAIT,
       language: 'en',

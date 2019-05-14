@@ -7,4 +7,7 @@ class SmokeTest < TestBase
   def setup
     super
   end
+
+  def test_launch_app
+  end
 end

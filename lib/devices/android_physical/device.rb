@@ -1,17 +1,19 @@
 # frozen_string_literal: true
 
 require 'test_environment.rb'
-require 'mobile_application.rb'
 
 # Device class for standard Android hardware Appium config
 class Device
+  APP_BINARY = 'app.apk'.freeze
+  APP_NAMESPACE = 'com.android.app'.freeze
+  APP_NAME = 'App'.freeze
   CAPABILITIES = {
     caps: {
       automationName: 'UiAutomator2',
       platformName: 'Android',
       platformVersion: '4.4',
       deviceName: 'Generic Android Device',
-      app: File.join(TestEnvironment::APP_PATH, MobileApplication::BINARY[:android_arm8]),
+      app: File.join(TestEnvironment::APP_PATH, BINARY),
       browserName: '',
       newCommandTimeout: TestEnvironment::IMPLICIT_WAIT,
       language: 'en',
