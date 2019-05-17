@@ -1,0 +1,3 @@
+[submodule "app/react-native-nw-react-calculator"]
+	path = app/react-native-nw-react-calculator
+	url = https://github.com/benoitvallon/react-native-nw-react-calculator
