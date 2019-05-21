@@ -4,7 +4,7 @@ require 'test_environment.rb'
 
 # Client class for standard iOS Simulator Appium config
 class Device
-  PROPERTIES = {
+  APP = {
     build: 'QA',
     binary: 'app.app',
     namespace: 'com.ios.app',
@@ -18,7 +18,7 @@ class Device
       platformName: 'iOS',
       platformVersion: '10.3',
       deviceName: 'iPhone 6',
-      app: File.join(TestEnvironment::APP_PATH, PROPERTIES[:binary]),
+      app: File.join(TestEnvironment::APP_PATH, APP[:binary]),
       browserName: '',
       newCommandTimeout: TestEnvironment::IMPLICIT_WAIT,
       language: 'en',

@@ -4,7 +4,7 @@ require 'test_environment.rb'
 
 # Client class for standard Android emulator Appium config
 class Client
-  PROPERTIES = {
+  APP = {
     build: 'QA',
     binary: 'app.apk',
     namespace: 'com.android.app',
@@ -15,13 +15,13 @@ class Client
     caps: {
       automationName: 'UiAutomator2',
       platformName: 'Android',
-      platformVersion: '4.4',
+      platformVersion: '9',
       deviceName: 'Generic Android Device',
-      app: File.join(TestEnvironment::APP_PATH, PROPERTIES[:binary]),
+      app: File.join(TestEnvironment::APP_PATH, APP[:binary]),
       browserName: '',
       newCommandTimeout: TestEnvironment::IMPLICIT_WAIT,
+      locale: 'US',
       language: 'en',
-      locale: 'en_US',
       uuid: '',
       orientation: 'PORTRAIT',
       autoWebview: false,
