@@ -12,3 +12,5 @@ gem 'rake', '~> 12.3'
 gem "pry", "~> 0.12.2"
 
 gem "rubocop", "~> 0.69.0"
+
+gem "rubocop-performance", "~> 1.3"
